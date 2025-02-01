@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-900 text-white">
+    <div className="flex items-center justify-center h-screen text-white">
       <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center w-96">
         <h1 className="text-2xl font-bold mb-4">Submit a Number</h1>
         <form onSubmit={handleSubmit}>
