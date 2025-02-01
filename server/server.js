@@ -14,17 +14,11 @@ const app = express();
 
 // CORS
 app.use(cors());
-/*** Allowing specific methods: If you need to allow specific HTTP methods (e.g., GET, POST, etc.), you can specify that in the cors() options: */
-app.use(
-  cors({
-    methods: ["GET", "POST", "PUT"],
-  })
-);
-/*** Allowing credentials: If your app involves cookies or HTTP authentication (e.g., JWT tokens), you'll need to explicitly allow credentials: */
 app.use(
   cors({
     origin: process.env.API_URL || "http://localhost:3000",
-    credentials: true, // allows cookies and headers
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
   })
 );
 
