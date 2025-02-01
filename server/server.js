@@ -21,12 +21,12 @@ app.use(
   })
 );
 /*** Allowing credentials: If your app involves cookies or HTTP authentication (e.g., JWT tokens), you'll need to explicitly allow credentials: */
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000",
-//     credentials: true, // allows cookies and headers
-//   })
-// );
+app.use(
+  cors({
+    origin: process.env.API_URL || "http://localhost:3000",
+    credentials: true, // allows cookies and headers
+  })
+);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
