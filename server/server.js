@@ -1,10 +1,10 @@
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 import express from "express";
-import route from "routes.js";
+import route from "./route.js";
 // import path from "path";
 // import { fileURLToPath } from "url";
 
-dotenv.config();
+// dotenv.config();
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/", route);
 
-const port = process.env.PORT || 3000;
+const port = 3000;
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

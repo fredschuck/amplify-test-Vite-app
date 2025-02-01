@@ -1,7 +1,9 @@
 const calculate = async (req, res) => {
-  const { num } = req.body;
-  const result = num * 2;
-  res.json({ result });
+  console.log("Made it!");
+  const { number } = req.body;
+  console.log("num:", number);
+  const result = number * 2;
+  return res.json({ result });
 };
 
 export { calculate };
