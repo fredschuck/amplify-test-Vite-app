@@ -9,7 +9,7 @@ function App() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://main.dbjc9749ps6vl.amplifyapp.com//api/calc",
+        "https://main.dbjc9749ps6vl.amplifyapp.com/api/calc",
         {
           method: "POST",
           headers: {
