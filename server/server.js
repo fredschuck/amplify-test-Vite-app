@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import express from "express";
 import route from "./route.js";
 import cors from "cors";
+import bodyParser from "body-parser";
 // import path from "path";
 // import { fileURLToPath } from "url";
 
@@ -23,6 +24,7 @@ app.use(
   })
 );
 
+app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(express.static(path.join(__dirname, "../client/dist")));
