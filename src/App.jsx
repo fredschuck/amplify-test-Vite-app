@@ -12,9 +12,14 @@ function App() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "X-Debug-Info": "Testing-Request",
         },
         body: JSON.stringify({ number }),
       });
+
+      const text = await response.text(); // Read response as text to check for errors
+      console.log("Raw Response:", text);
+
       const data = await response.json();
       setResult(data.result); // Assuming the API returns { result: <calculated_value> }
       console.log("Response:", data);
