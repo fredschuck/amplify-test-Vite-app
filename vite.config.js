@@ -13,4 +13,7 @@ export default defineConfig({
       "/api": process.env.API_URL || "http://localhost:3000",
     },
   },
+  build: {
+    sourcemap: true,
+  },
 });
