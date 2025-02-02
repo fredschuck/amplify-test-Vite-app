@@ -8,16 +8,13 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(
-        "https://main.dbjc9749ps6vl.amplifyapp.com/api/calc",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ number }),
-        }
-      );
+      const response = await fetch("/api/calc", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ number }),
+      });
       const data = await response.json();
       setResult(data.result); // Assuming the API returns { result: <calculated_value> }
       console.log("Response:", data);
